@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div class="container-fluid" style="padding: 0px">
+        <nav class="navbar navbar-expand-sm bg-danger">
+            <a class="navbar-brand" href="">
+                <img src="images/logo2.png" alt="" width="45px">
+            </a>
+            <h2>Cricket Game</h2>
+        </nav>
+    </div>
+
+    <!--Section 1 (team naming and toss) -->
+    <div id="hide-form">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-7">
+                    <form class="form" onSubmit="return toss()">
+                        <div class="form-group">
+                            <label for="first-team">First Team Name</label>
+                            <input type="text" id="first-team" class="form-control" required placeholder="Your Team Name..">
+                        </div>
+                        <div class="form-group">
+                            <label for="second-team">Second Team Name</label>
+                            <input type="text" id="second-team" class="form-control" required placeholder="Opponent Team Name..">
+                        </div>
+                        <div class="form-group">
+                            Select One:
+                            <br>
+                            <input type="radio" name="r1" value="heads" id="heads" checked>
+                            <label for="heads" class="label">Heads</label>
+                            <input type="radio" name="r1" value="tails" id="tails">
+                            <label for="tails" class="label">Tails</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Toss" class="btn btn-danger">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Section 2 (Toss Details) -->
+    <div id="hide-toss-details">
+        <div class="container-fluid">
+            <p id="toss-message"></p>
+        </div>
+        <div class="container-fluid text-center">
+            <div id="choose" class="marg-top display-none">
+                <p style="font-weight: bold ; background: rgba(255,255,255,0.7)">What Would You Like To Do First</p>
+                <input type="radio" name="r2" value="bat" id="bat" checked>
+                <label for="bat">Bat</label>
+                <input type="radio" name="r2" value="field" id="field">
+                <label for="feild">Field</label>
+            </div>
+            <p id="comp-decision" class="default-style"></p>
+        </div>
+        <input type="button" value="let's Start" onClick="gameStart()" class="btn btn-primary display-none center-text" id="btn">
+        <p id="user-decision"></p>
+    </div>
+
+
+    <!-- Section 3 (game) -->
+    <div class="container-fluid display-none" id="show">
+        <h1 class="text-center">ScoreBoard</h1>
+        <div id="game" class="scoreboard">
+            <span id="score">Runs = 0</span>
+            <span class="marg-left" id="wicket">Wickets = 0</span>
+            <span class="marg-left" id="ball">Remaining Balls = 12</span>
+            <span class="marg-left" id="target"></span>
+        </div>
+        <p id="team-name"></p>
+        <button onclick="ball()" id="ball-btn" class="btn btn-success">Ball</button>
+        <span id="innings-btn"></span>        
+        <!-- <h2 id="target-el" class="text-center"></h2> -->
+        <p id="run-show"></p>
+        <h2 id="winner"></h2>
+            <button onclick="playagain()" class="btn btn-success center-text" id="play-again">Play Again</button>     
+    </div>
+    
+
+
+    <script src="app.js"></script>
+</body>
+</html>

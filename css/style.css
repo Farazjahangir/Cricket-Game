@@ -1,0 +1,120 @@
+body{
+    background-image: url('../images/bg2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+input[type="radio"]{
+    margin-top: 15px;
+}
+#tails , #field{
+    margin-left: 10px;
+}
+.display-none{
+    display: none;
+}
+#toss-message{
+    color: rgb(14, 58, 13);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 90px;
+    font-weight: bold;
+    background: rgba(255,255,255,0.7);
+}
+.marg-top{
+    margin-top: 30px;
+}
+.marg-top2{
+    margin-top: 80px;
+}
+.default-style{
+    color: #06020e;
+    font-weight: bold;
+    font-size: 22px;
+    background: rgba(255,255,255,0.7);    
+}
+#team-name{
+    font-weight: bold;
+    text-align: center;
+    font-size: 45px;
+    color: #24005efd;
+    margin-top: 20px;
+}
+#run-show{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    background: rgba(255,255,255,0.7);    
+    margin-top: 20px;
+}
+#winner{
+    text-align: center;
+    margin-top: 30px;
+    background: rgba(255,255,255,0.7);    
+}
+#error , #error2 , #error3{
+  visibility: hidden;
+  color: red;
+}
+.marg-left{
+    margin-left: 40px;
+}
+.center-text{
+    margin : 0 auto;
+    margin-top: 40px
+}
+.scoreboard{
+    border: 4px double grey;
+    border-radius: 20px;
+    padding: 40px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 23px;
+    background-color: rgba(245, 245, 220, 0.637);
+}
+input[type="text"]{
+    background-color: beige;
+}
+#hide-form{
+    margin-top: 30px;
+}
+.bg1{
+    background-color: grey;
+}
+input[type="radio"]{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@media  screen and (max-width: 890px){
+    .scoreboard{
+        font-size: 20px;
+    }
+    .marg-left{
+        margin-left: 30px;
+    }
+}
+
+@media  screen and (max-width: 770px){
+    .scoreboard{
+        width: 100%;
+        font-size: 18px;
+    }
+    .marg-left{
+        margin-left: 25px;
+    }
+}
+@media screen and (max-width: 520px){
+    .scoreboard span{
+        display: block;
+    }
+    
+    .scoreboard{
+        text-align: left;
+    }
+    .marg-left{
+        margin-left: 0;        
+    }
+}
